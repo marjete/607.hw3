@@ -1,0 +1,288 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={M.Vucinaj.607 HW3},
+  pdfauthor={Marjete},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{M.Vucinaj.607 HW3}
+\author{Marjete}
+\date{2022-09-18}
+
+\begin{document}
+\maketitle
+
+\#1. Using the 173 majors listed in fivethirtyeight.com's College Majors
+dataset
+{[}\url{https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/}{]},
+provide code that identifies the majors that contain either ``DATA'' or
+``STATISTICS''
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{majors }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\FunctionTok{url}\NormalTok{(}\StringTok{\textquotesingle{}https://raw.githubusercontent.com/fivethirtyeight/data/master/college{-}majors/majors{-}list.csv\textquotesingle{}}\NormalTok{), }\AttributeTok{stringsAsFactors =}\NormalTok{ F)}
+\FunctionTok{str}\NormalTok{(majors)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    174 obs. of  3 variables:
+##  $ FOD1P         : chr  "1100" "1101" "1102" "1103" ...
+##  $ Major         : chr  "GENERAL AGRICULTURE" "AGRICULTURE PRODUCTION AND MANAGEMENT" "AGRICULTURAL ECONOMICS" "ANIMAL SCIENCES" ...
+##  $ Major_Category: chr  "Agriculture & Natural Resources" "Agriculture & Natural Resources" "Agriculture & Natural Resources" "Agriculture & Natural Resources" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{grep}\NormalTok{(}\AttributeTok{pattern =} \StringTok{\textquotesingle{}STATISTICS|DATA\textquotesingle{}}\NormalTok{, majors}\SpecialCharTok{$}\NormalTok{Major, }\AttributeTok{value =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{ignore.case =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "MANAGEMENT INFORMATION SYSTEMS AND STATISTICS"
+## [2] "COMPUTER PROGRAMMING AND DATA PROCESSING"     
+## [3] "STATISTICS AND DECISION SCIENCE"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{majors}\SpecialCharTok{$}\NormalTok{Major[}\FunctionTok{grepl}\NormalTok{(}\StringTok{"DATA"}\NormalTok{, majors}\SpecialCharTok{$}\NormalTok{Major)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "COMPUTER PROGRAMMING AND DATA PROCESSING"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{majors}\SpecialCharTok{$}\NormalTok{Major[}\FunctionTok{grepl}\NormalTok{(}\StringTok{"STATISTICS"}\NormalTok{, majors}\SpecialCharTok{$}\NormalTok{Major)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "MANAGEMENT INFORMATION SYSTEMS AND STATISTICS"
+## [2] "STATISTICS AND DECISION SCIENCE"
+\end{verbatim}
+
+\#2 Write code that transforms the data below: {[}1{]} ``bell pepper''
+``bilberry'' ``blackberry'' ``blood orange'' {[}5{]} ``blueberry''
+``cantaloupe'' ``chili pepper'' ``cloudberry''\\
+{[}9{]} ``elderberry'' ``lime'' ``lychee'' ``mulberry''\\
+{[}13{]} ``olive'' ``salal berry'' Into a format like this: c(``bell
+pepper'', ``bilberry'', ``blackberry'', ``blood orange'', ``blueberry'',
+``cantaloupe'', ``chili pepper'', ``cloudberry'', ``elderberry'',
+``lime'', ``lychee'', ``mulberry'', ``olive'', ``salal berry'')
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Source\_data }\OtherTok{=} \StringTok{\textquotesingle{}[1] "bell pepper"  "bilberry"     "blackberry"   "blood orange"}
+
+\StringTok{[5] "blueberry"    "cantaloupe"   "chili pepper" "cloudberry"  }
+
+\StringTok{[9] "elderberry"   "lime"         "lychee"       "mulberry"    }
+
+\StringTok{[13] "olive"        "salal berry"\textquotesingle{}}
+
+
+\FunctionTok{library}\NormalTok{(stringr)}
+\NormalTok{healthy }\OtherTok{\textless{}{-}} \FunctionTok{str\_extract\_all}\NormalTok{(Source\_data, }\StringTok{\textquotesingle{}[:alpha:]+}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s[:alpha:]+|[:alpha:]+\textquotesingle{}}\NormalTok{)}
+\FunctionTok{unlist}\NormalTok{(healthy)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "bell pepper"  "bilberry"     "blackberry"   "blood orange" "blueberry"   
+##  [6] "cantaloupe"   "chili pepper" "cloudberry"   "elderberry"   "lime"        
+## [11] "lychee"       "mulberry"     "olive"        "salal berry"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"c("}\NormalTok{,}\FunctionTok{paste0}\NormalTok{(}\AttributeTok{sep =} \StringTok{\textquotesingle{}"\textquotesingle{}}\NormalTok{,healthy, }\AttributeTok{collapse =} \StringTok{\textquotesingle{}, \textquotesingle{}}\NormalTok{, }\AttributeTok{sep=}\StringTok{\textquotesingle{}"\textquotesingle{}}\NormalTok{),}\FunctionTok{paste}\NormalTok{(}\StringTok{")"}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## c("c("bell pepper", "bilberry", "blackberry", "blood orange", "blueberry", "cantaloupe", "chili pepper", "cloudberry", "elderberry", "lime", "lychee", "mulberry", "olive", "salal berry")")
+\end{verbatim}
+
+\#The two exercises below are taken from R for Data Science, 14.3.5.1 in
+the on-line version: \#3 Describe, in words, what these expressions will
+match: (.)\textbackslash1\textbackslash1 = `(.)' matches any one
+character and the `/1' means the same character repeated a second time
+and the next `/1' means the same character appearing three times in a
+row such as `bbb' (Are two slashes not needed?)
+
+``(.)(.)\textbackslash2\textbackslash1'' = `(.)(.)' represents a pair of
+characters, and //2//1 means the next pair of characters match it
+exactly with case sensitivity such as hiih
+
+(..)\textbackslash1 = `(..)'shows two characters, and'/1' represents
+that those two characters are repeated such as hihi (Are two slashes not
+needed?)
+
+``(.).\textbackslash1.\textbackslash1'' = the 1st, 3rd, and 5th ch
+match. Character A, followed by any character, Character A, followed by
+any character, Character A, such as 23242.
+
+``(.)(.)(.).*\textbackslash3\textbackslash2\textbackslash1'' = First 3
+characters match the last 3 characters in rever order, with any
+characters in between such as 12398321
+
+\#4 Construct regular expressions to match words that: Start and end
+with the same character.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str\_subset}\NormalTok{(words, }\StringTok{"\^{}(.)((.*}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{1$)|}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{1?$)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "a"          "america"    "area"       "dad"        "dead"      
+##  [6] "depend"     "educate"    "else"       "encourage"  "engine"    
+## [11] "europe"     "evidence"   "example"    "excuse"     "exercise"  
+## [16] "expense"    "experience" "eye"        "health"     "high"      
+## [21] "knock"      "level"      "local"      "nation"     "non"       
+## [26] "rather"     "refer"      "remember"   "serious"    "stairs"    
+## [31] "test"       "tonight"    "transport"  "treat"      "trust"     
+## [36] "window"     "yesterday"
+\end{verbatim}
+
+Contain a repeated pair of letters (e.g.~``church'' contains ``ch''
+repeated twice.)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str\_subset}\NormalTok{(words, }\StringTok{"([A{-}Za{-}z][A{-}Za{-}z]).*}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{1"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "appropriate" "church"      "condition"   "decide"      "environment"
+##  [6] "london"      "paragraph"   "particular"  "photograph"  "prepare"    
+## [11] "pressure"    "remember"    "represent"   "require"     "sense"      
+## [16] "therefore"   "understand"  "whether"
+\end{verbatim}
+
+Contain one letter repeated in at least three places (e.g.~``eleven''
+contains three ``e''s.)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str\_subset}\NormalTok{(words, }\StringTok{"([a{-}z]).*}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{1.*}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{1"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "appropriate" "available"   "believe"     "between"     "business"   
+##  [6] "degree"      "difference"  "discuss"     "eleven"      "environment"
+## [11] "evidence"    "exercise"    "expense"     "experience"  "individual" 
+## [16] "paragraph"   "receive"     "remember"    "represent"   "telephone"  
+## [21] "therefore"   "tomorrow"
+\end{verbatim}
+
+\#Latex error-\textgreater{} tinytex
+
+```
+
+\end{document}

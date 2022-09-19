@@ -1,0 +1,88 @@
+---
+title: "M.Vucinaj.607 HW3"
+author: "Marjete"
+date: "2022-09-18"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+#1. Using the 173 majors listed in fivethirtyeight.com’s College Majors dataset [https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/], provide code that identifies the majors that contain either "DATA" or "STATISTICS"
+```{r}
+majors <- read.csv(url('https://raw.githubusercontent.com/fivethirtyeight/data/master/college-majors/majors-list.csv'), stringsAsFactors = F)
+str(majors)
+```
+
+```{r}
+grep(pattern = 'STATISTICS|DATA', majors$Major, value = TRUE, ignore.case = TRUE)
+```
+```{r}
+majors$Major[grepl("DATA", majors$Major)]
+majors$Major[grepl("STATISTICS", majors$Major)]
+```
+
+
+#2 Write code that transforms the data below:
+[1] "bell pepper"  "bilberry"     "blackberry"   "blood orange"
+[5] "blueberry"    "cantaloupe"   "chili pepper" "cloudberry"  
+[9] "elderberry"   "lime"         "lychee"       "mulberry"    
+[13] "olive"        "salal berry"
+Into a format like this:
+c("bell pepper", "bilberry", "blackberry", "blood orange", "blueberry", "cantaloupe", "chili pepper", "cloudberry", "elderberry", "lime", "lychee", "mulberry", "olive", "salal berry")
+```{r}
+Source_data = '[1] "bell pepper"  "bilberry"     "blackberry"   "blood orange"
+
+[5] "blueberry"    "cantaloupe"   "chili pepper" "cloudberry"  
+
+[9] "elderberry"   "lime"         "lychee"       "mulberry"    
+
+[13] "olive"        "salal berry"'
+
+
+library(stringr)
+healthy <- str_extract_all(Source_data, '[:alpha:]+\\s[:alpha:]+|[:alpha:]+')
+unlist(healthy)
+```
+
+```{r}
+cat(paste0("c(",paste0(sep = '"',healthy, collapse = ', ', sep='"'),paste(")")))
+
+```
+
+#The two exercises below are taken from R for Data Science, 14.3.5.1 in the on-line version:
+#3 Describe, in words, what these expressions will match:
+(.)\1\1 = '(.)' matches any one character and the '/1' means the same character repeated a second time and the next '/1' means the same character appearing three times in a row such as 'bbb'
+(Are two slashes not needed?)
+
+"(.)(.)\\2\\1" = '(.)(.)' represents a pair of characters, and //2//1 means the next pair of characters match it exactly with case sensitivity such as hiih
+
+(..)\1 = '(..)'shows two characters, and '/1' represents that those two characters are repeated such as hihi
+(Are two slashes not needed?)
+
+"(.).\\1.\\1" =  the 1st, 3rd, and 5th ch match.  Character A, followed by any character, Character A, followed by any character, Character A, such as 23242.
+
+"(.)(.)(.).*\\3\\2\\1" = First 3 characters match the last 3 characters in rever order, with any characters in between such as 12398321
+
+
+#4 Construct regular expressions to match words that:
+Start and end with the same character.
+```{r}
+str_subset(words, "^(.)((.*\\1$)|\\1?$)")
+```
+
+Contain a repeated pair of letters (e.g. "church" contains "ch" repeated twice.)
+```{r}
+str_subset(words, "([A-Za-z][A-Za-z]).*\\1")
+
+```
+
+Contain one letter repeated in at least three places (e.g. "eleven" contains three "e"s.)
+```{r}
+str_subset(words, "([a-z]).*\\1.*\\1")
+
+```
+#Latex error-> tinytex
+
+```
+
